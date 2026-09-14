@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FleetX  | Vehicles</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="brand">
+        <div class="logo">FX</div>
+
+        <div class="brand-text">
+          <h2>FleetX</h2>
+          <span>DIGITAL TWIN</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+
+        <a href="../index.html" class="nav-item">
+          <span>Overview</span>
+        </a>
+
+        <a href="operations.html" class="nav-item">
+          <span>Operations</span>
+        </a>
+
+        <a href="risk.html" class="nav-item">
+          <span>Risk</span>
+        </a>
+
+        <a href="adaptation.html" class="nav-item">
+          <span>Adaptation</span>
+        </a>
+
+        <a href="vehicles.html" class="nav-item active">
+          <span>Vehicles</span>
+        </a>
+
+        <a href="alerts.html" class="nav-item">
+          <span>Alerts</span>
+        </a>
+
+      </nav>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+      <!-- HEADER -->
+      <header class="top-header">
+
+        <div class="page-title">
+
+          <div class="eyebrow">
+            Fleet readiness
+          </div>
+
+          <h1>
+            Vehicle operations
+          </h1>
+
+        </div>
+
+      </header>
+
+
+      <!-- KPI SECTION -->
+      <section class="kpi-grid">
+
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Active fleet
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2 id="activeFleet">
+              --
+            </h2>
+
+            <span class="change positive">
+              LIVE
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Idle
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2 id="idleVehicles">
+              --
+            </h2>
+
+            <span class="change warning">
+              LIVE
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Maintenance
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2 id="maintenanceVehicles">
+              --
+            </h2>
+
+            <span class="change blue">
+              LIVE
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Utilization
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2 id="fleetUtilization">
+              --
+            </h2>
+
+            <span class="change positive">
+              LIVE
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- VEHICLE TELEMETRY -->
+      <section class="dashboard-card vehicle-dashboard">
+
+        <div class="card-header">
+
+          <div>
+            <div class="eyebrow">
+              Digital twin
+            </div>
+
+            <h2>
+              Live vehicle telemetry
+            </h2>
+          </div>
+
+          <span
+            class="status-pill"
+            id="vehicleConnection">
+            CONNECTING
+          </span>
+
+        </div>
+
+
+        <!-- VEHICLE GRID -->
+        <div
+          id="vehicleGrid"
+          class="vehicle-grid">
+
+          <div class="vehicle-loading">
+            Connecting to vehicle telemetry...
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- VEHICLE JAVASCRIPT -->
+  <script src="../js/vehicles.js"></script>
+
+</body>
+
+</html>

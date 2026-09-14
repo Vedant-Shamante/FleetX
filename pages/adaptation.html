@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>FleetX| Adaptation</title>
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+      <div class="brand">
+
+        <div class="logo">
+          FX
+        </div>
+
+        <div class="brand-text">
+          <h2>FleetX</h2>
+          <span>DIGITAL TWIN</span>
+        </div>
+
+      </div>
+
+
+      <nav class="sidebar-nav">
+
+        <a href="../index.html" class="nav-item">
+          <span>Overview</span>
+        </a>
+
+        <a href="operations.html" class="nav-item">
+          <span>Operations</span>
+        </a>
+
+        <a href="risk.html" class="nav-item">
+          <span>Risk</span>
+        </a>
+
+        <a href="adaptation.html" class="nav-item active">
+          <span>Adaptation</span>
+        </a>
+
+        <a href="vehicles.html" class="nav-item">
+          <span>Vehicles</span>
+        </a>
+
+        <a href="alerts.html" class="nav-item">
+          <span>Alerts</span>
+        </a>
+
+      </nav>
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="main-content">
+
+
+      <!-- ================= HEADER ================= -->
+
+      <header class="top-header">
+
+        <div class="page-title">
+
+          <div class="eyebrow">
+            Scenario tuning
+          </div>
+
+          <h1>
+            Mine adaptation
+          </h1>
+
+        </div>
+
+      </header>
+
+
+      <!-- ================= KPI CARDS ================= -->
+
+      <section class="kpi-grid">
+
+
+        <!-- SCENARIOS -->
+
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Scenarios
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2 id="scenarios">
+              --
+            </h2>
+
+            <span class="change positive">
+              LIVE
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- OPTIMIZED ROUTES -->
+
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Optimized routes
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2 id="optimizedRoutes">
+              --
+            </h2>
+
+            <span class="change blue">
+              LIVE
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- FUEL SAVINGS -->
+
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Fuel savings
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2 id="fuelSavings">
+              --
+            </h2>
+
+            <span class="change positive">
+              LIVE
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- RESPONSE TIME -->
+
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Response time
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2 id="responseTime">
+              --
+            </h2>
+
+            <span class="change warning">
+              LIVE
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= DASHBOARD ================= -->
+
+      <section class="dashboard-grid">
+
+
+        <!-- ================= SIMULATION PLAN ================= -->
+
+        <div class="dashboard-card">
+
+          <div class="card-header">
+
+            <h2>
+              Simulation plan
+            </h2>
+
+            <span class="status-pill">
+              LIVE
+            </span>
+
+          </div>
+
+
+          <!-- WEATHER -->
+
+          <div class="risk-item">
+
+            <div class="risk-top">
+
+              <span>
+                Weather disruption
+              </span>
+
+              <span class="risk medium">
+                MEDIUM
+              </span>
+
+            </div>
+
+            <div class="simulation-progress">
+
+              <div
+                class="simulation-progress-bar medium"
+                style="width:66%">
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- HAUL REROUTE -->
+
+          <div class="risk-item">
+
+            <div class="risk-top">
+
+              <span>
+                Haul reroute
+              </span>
+
+              <span class="risk low">
+                LOW
+              </span>
+
+            </div>
+
+            <div class="simulation-progress">
+
+              <div
+                class="simulation-progress-bar low"
+                style="width:41%">
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- TRUCK DISPATCH -->
+
+          <div class="risk-item">
+
+            <div class="risk-top">
+
+              <span>
+                Truck dispatch
+              </span>
+
+              <span class="risk high">
+                HIGH
+              </span>
+
+            </div>
+
+            <div class="simulation-progress">
+
+              <div
+                class="simulation-progress-bar high"
+                style="width:74%">
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <!-- SCHEDULE LOAD -->
+
+          <div class="risk-item">
+
+            <div class="risk-top">
+
+              <span>
+                Schedule load
+              </span>
+
+              <span class="risk low">
+                LOW
+              </span>
+
+            </div>
+
+            <div class="simulation-progress">
+
+              <div
+                class="simulation-progress-bar low"
+                style="width:32%">
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ================= ADAPTIVE ACTIONS ================= -->
+
+        <div class="dashboard-card">
+
+          <div class="card-header">
+
+            <h2>
+              Adaptive actions
+            </h2>
+
+            <span class="risk-class">
+              A3
+            </span>
+
+          </div>
+
+
+          <!-- ACTION 1 -->
+
+          <div class="alert-row">
+
+            <div class="alert-icon medium-icon">
+              !
+            </div>
+
+            <div class="alert-info">
+
+              <strong>
+                Shift dump timing
+              </strong>
+
+              <span>
+                Reduce queue by 18%
+              </span>
+
+            </div>
+
+            <span class="alert-level medium-text">
+              PLAN
+            </span>
+
+          </div>
+
+
+          <!-- ACTION 2 -->
+
+          <div class="alert-row">
+
+            <div class="alert-icon high-icon">
+              !
+            </div>
+
+            <div class="alert-info">
+
+              <strong>
+                Road closure reroute
+              </strong>
+
+              <span>
+                Northern corridor
+              </span>
+
+            </div>
+
+            <span class="alert-level high-text">
+              ACTIVE
+            </span>
+
+          </div>
+
+
+          <!-- ACTION 3 -->
+
+          <div class="alert-row">
+
+            <div class="alert-icon medium-icon">
+              !
+            </div>
+
+            <div class="alert-info">
+
+              <strong>
+                Ventilation schedule
+              </strong>
+
+              <span>
+                Zone B optimization
+              </span>
+
+            </div>
+
+            <span class="alert-level medium-text">
+              SCHEDULED
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ================= RECOMMENDED ACTION ================= -->
+
+      <section class="dashboard-card">
+
+        <div class="card-header">
+
+          <h2>
+            Recommended action
+          </h2>
+
+          <span class="status-pill">
+            LIVE
+          </span>
+
+        </div>
+
+
+        <div class="alert-row">
+
+          <div class="alert-icon high-icon">
+            !
+          </div>
+
+          <div class="alert-info">
+
+            <strong id="recommendedAction">
+              Loading recommendation...
+            </strong>
+
+            <span>
+              Generated by the adaptation engine
+            </span>
+
+          </div>
+
+          <span class="alert-level high-text">
+            RECOMMENDED
+          </span>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- ================= JAVASCRIPT ================= -->
+
+  <script src="../js/adaptation.js"></script>
+
+</body>
+
+</html>

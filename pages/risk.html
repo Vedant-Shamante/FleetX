@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>FleetX | Risk</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="brand">
+        <div class="logo">FX</div>
+
+        <div class="brand-text">
+          <h2>FleetX </h2>
+          <span>DIGITAL TWIN</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+
+        <a href="../index.html" class="nav-item">
+          <span>Overview</span>
+        </a>
+
+        <a href="operations.html" class="nav-item">
+          <span>Operations</span>
+        </a>
+
+        <a href="risk.html" class="nav-item active">
+          <span>Risk</span>
+        </a>
+
+        <a href="adaptation.html" class="nav-item">
+          <span>Adaptation</span>
+        </a>
+
+        <a href="vehicles.html" class="nav-item">
+          <span>Vehicles</span>
+        </a>
+
+        <a href="alerts.html" class="nav-item">
+          <span>Alerts</span>
+        </a>
+
+      </nav>
+
+    </aside>
+
+
+    <!-- MAIN -->
+    <main class="main-content">
+
+      <header class="top-header">
+
+        <div class="page-title">
+
+          <div class="eyebrow">
+            Risk Intelligence
+          </div>
+
+          <h1>
+            Risk monitoring
+          </h1>
+
+        </div>
+
+      </header>
+
+
+      <!-- KPI CARDS -->
+      <section class="kpi-grid">
+
+        <!-- Risk Index -->
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Risk index
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2 id="riskIndex">
+              --
+            </h2>
+
+            <span class="change blue">
+              LIVE
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Slope -->
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Slope stability
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2 id="slopeStability">
+              --
+            </h2>
+
+            <span class="change warning">
+              LIVE
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Ventilation -->
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Ventilation flow
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2 id="ventilationFlow">
+              --
+            </h2>
+
+            <span class="change positive">
+              LIVE
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- Road Friction -->
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Road friction
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2 id="roadFriction">
+              --
+            </h2>
+
+            <span class="change blue">
+              LIVE
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- RISK DASHBOARD -->
+      <section class="dashboard-grid">
+
+
+        <!-- RISK WATCH -->
+        <div class="dashboard-card">
+
+          <div class="card-header">
+
+            <h2>
+              Risk watch
+            </h2>
+
+            <span
+              class="risk-class"
+              id="riskClass"
+            >
+              --
+            </span>
+
+          </div>
+
+
+          <!-- Slope -->
+          <div class="risk-item">
+
+            <div class="risk-top">
+
+              <span>
+                Slope stability
+              </span>
+
+              <span class="risk high">
+                HIGH
+              </span>
+
+            </div>
+
+            <div class="risk-progress-single">
+
+              <div
+                class="risk-progress-single-bar"
+                id="slopeBar"
+                style="width: 0%"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Ventilation -->
+          <div class="risk-item">
+
+            <div class="risk-top">
+
+              <span>
+                Ventilation flow
+              </span>
+
+              <span class="risk medium">
+                MEDIUM
+              </span>
+
+            </div>
+
+            <div class="risk-progress-single">
+
+              <div
+                class="risk-progress-single-bar"
+                id="ventilationBar"
+                style="width: 0%"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Road -->
+          <div class="risk-item">
+
+            <div class="risk-top">
+
+              <span>
+                Road friction
+              </span>
+
+              <span class="risk medium">
+                MEDIUM
+              </span>
+
+            </div>
+
+            <div class="risk-progress-single">
+
+              <div
+                class="risk-progress-single-bar"
+                id="frictionBar"
+                style="width: 0%"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <!-- Blast -->
+          <div class="risk-item">
+
+            <div class="risk-top">
+
+              <span>
+                Blast clearance
+              </span>
+
+              <span class="risk low">
+                LOW
+              </span>
+
+            </div>
+
+            <div class="risk-progress-single">
+
+              <div
+                class="risk-progress-single-bar"
+                id="blastBar"
+                style="width: 0%"
+              ></div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CONTROLS -->
+        <div class="dashboard-card">
+
+          <div class="card-header">
+
+            <h2>
+              Controls
+            </h2>
+
+            <span class="status-pill">
+              active
+            </span>
+
+          </div>
+
+
+          <div class="alert-row">
+
+            <div class="alert-icon high-icon">
+              !
+            </div>
+
+            <div class="alert-info">
+
+              <strong>
+                Wall support review
+              </strong>
+
+              <span>
+                North wall · 2 min ago
+              </span>
+
+            </div>
+
+            <span class="alert-level high-text">
+              HIGH
+            </span>
+
+          </div>
+
+
+          <div class="alert-row">
+
+            <div class="alert-icon medium-icon">
+              !
+            </div>
+
+            <div class="alert-info">
+
+              <strong>
+                Ventilation boost
+              </strong>
+
+              <span>
+                Zone B · 8 min ago
+              </span>
+
+            </div>
+
+            <span class="alert-level medium-text">
+              MEDIUM
+            </span>
+
+          </div>
+
+
+          <div class="alert-row">
+
+            <div class="alert-icon medium-icon">
+              !
+            </div>
+
+            <div class="alert-info">
+
+              <strong>
+                Friction treatment
+              </strong>
+
+              <span>
+                Haul road 03 · 12 min ago
+              </span>
+
+            </div>
+
+            <span class="alert-level medium-text">
+              MEDIUM
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- RISK JAVASCRIPT -->
+  <script src="../js/risk.js"></script>
+
+</body>
+
+</html>

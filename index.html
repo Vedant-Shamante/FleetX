@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FleetX | Mine Control Center</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- =====================================================
+         SIDEBAR
+    ====================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="logo">
+                FX
+            </div>
+
+            <div class="brand-text">
+                <h2>FleetX</h2>
+                <span>DIGITAL TWIN</span>
+            </div>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="index.html" class="nav-item active">
+                <span>⌂</span>
+                <strong>Overview</strong>
+            </a>
+
+            <a href="pages/operations.html" class="nav-item">
+                <span>⚙</span>
+                <strong>Operations</strong>
+            </a>
+
+            <a href="pages/risk.html" class="nav-item">
+                <span>▥</span>
+                <strong>Risk</strong>
+            </a>
+
+            <a href="pages/adaptation.html" class="nav-item">
+                <span>⌘</span>
+                <strong>Adaptation</strong>
+            </a>
+
+            <a href="pages/vehicles.html" class="nav-item">
+                <span>▣</span>
+                <strong>Vehicles</strong>
+            </a>
+
+            <a href="pages/alerts.html" class="nav-item">
+                <span>♧</span>
+                <strong>Alerts</strong>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="top-header">
+
+            <div class="page-title">
+
+                <div class="eyebrow">
+                    OPERATIONS OVERVIEW
+                </div>
+
+                <h1>
+                    Mine control center
+                </h1>
+
+                <p>
+                    Real-time fleet monitoring and operational intelligence
+                </p>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button class="live-btn">
+                    <span class="live-dot"></span>
+                    Live view
+                </button>
+
+                <button class="scenario-btn">
+                    + New scenario
+                </button>
+
+                <div class="time-card">
+
+                    <span class="clock-icon"></span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- =====================================================
+             KPI CARDS
+        ====================================================== -->
+
+        <section class="kpi-grid">
+
+
+            <!-- ACTIVE VEHICLES -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-icon vehicle-kpi">
+                    ▣
+                </div>
+
+                <div class="kpi-content">
+
+                    <span class="kpi-label">
+                        Active vehicles
+                    </span>
+
+                    <h2 id="vehicleCount">
+                        --
+                    </h2>
+
+                    <span class="live-pill green">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+                <div class="mini-chart vehicle-chart"></div>
+
+            </div>
+
+
+            <!-- ALERTS -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-icon alert-kpi">
+                    ♧
+                </div>
+
+                <div class="kpi-content">
+
+                    <span class="kpi-label">
+                        Alerts
+                    </span>
+
+                    <h2 id="alertCount">
+                        --
+                    </h2>
+
+                    <span class="live-pill orange">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+                <div class="mini-chart alert-chart"></div>
+
+            </div>
+
+
+            <!-- RISK -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-icon risk-kpi">
+                    ◇
+                </div>
+
+                <div class="kpi-content">
+
+                    <span class="kpi-label">
+                        Risk index
+                    </span>
+
+                    <h2 id="riskIndex">
+                        --
+                    </h2>
+
+                    <span class="live-pill blue">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+                <div class="mini-chart risk-chart"></div>
+
+            </div>
+
+
+            <!-- FUEL -->
+
+            <div class="kpi-card">
+
+                <div class="kpi-icon fuel-kpi">
+                    ▤
+                </div>
+
+                <div class="kpi-content">
+
+                    <span class="kpi-label">
+                        Fuel efficiency
+                    </span>
+
+                    <h2>
+                        91%
+                    </h2>
+
+                    <span class="fuel-change">
+                        ↑ +4%
+                    </span>
+
+                </div>
+
+                <div class="mini-chart fuel-chart"></div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             MAIN DASHBOARD
+        ====================================================== -->
+
+        <section class="main-dashboard">
+
+
+            <!-- =================================================
+                 MINE MAP
+            ================================================== -->
+
+            <div class="dashboard-card map-card">
+
+                <div class="card-header">
+
+                    <div>
+                        <h2>Mine map</h2>
+                        <span class="card-subtitle">
+                            Digital Twin • Live vehicle positions
+                        </span>
+                    </div>
+
+                    <span class="status-pill">
+                        ● LIVE
+                    </span>
+
+                </div>
+
+
+                <div class="mine-map">
+
+
+                    <!-- REAL MINE IMAGE -->
+
+                    <div class="mine-map-image"></div>
+
+
+                    <!-- DARK OVERLAY -->
+
+                    <div class="mine-map-overlay"></div>
+
+
+                    <!-- LOADING ZONE -->
+
+                    <div class="map-area loading-area">
+
+                        <div class="area-circle"></div>
+
+                        <div class="area-label">
+                            <span></span>
+                            Loading zone
+                        </div>
+
+                    </div>
+
+
+                    <!-- ROAD CORRIDOR -->
+
+                    <div class="map-area road-area">
+
+                        <div class="road-outline"></div>
+
+                        <div class="area-label">
+                            <span></span>
+                            Road corridor
+                        </div>
+
+                    </div>
+
+
+                    <!-- RESTRICTED -->
+
+                    <div class="map-area restricted-area">
+
+                        <div class="area-circle"></div>
+
+                        <div class="area-label">
+                            <span></span>
+                            Restricted
+                        </div>
+
+                    </div>
+
+
+                    <!-- DUMPING -->
+
+                    <div class="map-area dumping-area">
+
+                        <div class="area-circle"></div>
+
+                        <div class="area-label">
+                            <span></span>
+                            Dumping zone
+                        </div>
+
+                    </div>
+
+
+                    <!-- =========================================
+                         VEHICLES
+                    ========================================== -->
+
+                    <div class="mine-vehicle vehicle-1">
+                        <span class="vehicle-status operating"></span>
+                        V01
+                    </div>
+
+                    <div class="mine-vehicle vehicle-2">
+                        <span class="vehicle-status danger"></span>
+                        V08
+                    </div>
+
+                    <div class="mine-vehicle vehicle-3">
+                        <span class="vehicle-status idle"></span>
+                        V14
+                    </div>
+
+                    <div class="mine-vehicle vehicle-4">
+                        <span class="vehicle-status operating"></span>
+                        V03
+                    </div>
+
+                    <div class="mine-vehicle vehicle-5">
+                        <span class="vehicle-status maintenance"></span>
+                        V05
+                    </div>
+
+                    <div class="mine-vehicle vehicle-6">
+                        <span class="vehicle-status operating"></span>
+                        V09
+                    </div>
+
+                    <div class="mine-vehicle vehicle-7">
+                        <span class="vehicle-status operating"></span>
+                        V18
+                    </div>
+
+                    <div class="mine-vehicle vehicle-8">
+                        <span class="vehicle-status danger"></span>
+                        V22
+                    </div>
+
+
+                    <!-- MAP CONTROLS -->
+
+                    <div class="map-controls">
+
+                        <button>+</button>
+
+                        <button>−</button>
+
+                        <button>◎</button>
+
+                    </div>
+
+
+                    <!-- SCALE -->
+
+                    <div class="map-scale">
+
+                        <span>0</span>
+
+                        <div class="scale-line">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <span>500 m</span>
+                        <span>1 km</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 RIGHT SIDE
+            ================================================== -->
+
+            <div class="right-column">
+
+
+                <!-- RISK WATCH -->
+
+                <div class="dashboard-card risk-watch-card">
+
+                    <div class="card-header">
+
+                        <h2>
+                            Risk watch
+                        </h2>
+
+                        <span class="status-pill">
+                            ● LIVE
+                        </span>
+
+                    </div>
+
+
+                    <!-- SLOPE -->
+
+                    <div class="risk-item">
+
+                        <div class="risk-title">
+
+                            <span>
+                                Slope stability
+                            </span>
+
+                            <strong id="slopeValue">
+                                --
+                            </strong>
+
+                        </div>
+
+                        <div class="risk-progress">
+                            <span
+                                id="slopeBar"
+                                class="risk-fill green-fill">
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- VENTILATION -->
+
+                    <div class="risk-item">
+
+                        <div class="risk-title">
+
+                            <span>
+                                Ventilation flow
+                            </span>
+
+                            <strong id="ventilationValue">
+                                --
+                            </strong>
+
+                        </div>
+
+                        <div class="risk-progress">
+                            <span
+                                id="ventilationBar"
+                                class="risk-fill blue-fill">
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- ROAD -->
+
+                    <div class="risk-item">
+
+                        <div class="risk-title">
+
+                            <span>
+                                Road friction
+                            </span>
+
+                            <strong id="frictionValue">
+                                --
+                            </strong>
+
+                        </div>
+
+                        <div class="risk-progress">
+                            <span
+                                id="frictionBar"
+                                class="risk-fill yellow-fill">
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <!-- BLAST -->
+
+                    <div class="risk-item">
+
+                        <div class="risk-title">
+
+                            <span>
+                                Blast clearance
+                            </span>
+
+                            <strong id="blastValue">
+                                --
+                            </strong>
+
+                        </div>
+
+                        <div class="risk-progress">
+                            <span
+                                id="blastBar"
+                                class="risk-fill green-fill">
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     LEGEND
+                ================================================== -->
+
+                <div class="dashboard-card legend-card">
+
+                    <div class="card-header">
+
+                        <h2>
+                            Map legend
+                        </h2>
+
+                    </div>
+
+
+                    <div class="legend-grid">
+
+
+                        <div class="legend-item">
+                            <span class="legend-dot loading-dot"></span>
+                            Loading zone
+                        </div>
+
+                        <div class="legend-item">
+                            <span class="legend-dot operating-dot"></span>
+                            Operating
+                        </div>
+
+
+                        <div class="legend-item">
+                            <span class="legend-dot road-dot"></span>
+                            Road corridor
+                        </div>
+
+                        <div class="legend-item">
+                            <span class="legend-dot idle-dot"></span>
+                            Idle
+                        </div>
+
+
+                        <div class="legend-item">
+                            <span class="legend-dot dumping-dot"></span>
+                            Dumping zone
+                        </div>
+
+                        <div class="legend-item">
+                            <span class="legend-dot maintenance-dot"></span>
+                            Maintenance
+                        </div>
+
+
+                        <div class="legend-item">
+                            <span class="legend-dot restricted-dot"></span>
+                            Restricted area
+                        </div>
+
+                        <div class="legend-item">
+                            <span class="legend-dot danger-dot"></span>
+                            Alert / Risk
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="js/dashboard.js"></script>
+
+</body>
+</html>

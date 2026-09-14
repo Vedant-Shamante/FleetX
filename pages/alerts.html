@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> FleetX | Alerts</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar">
+
+      <div class="brand">
+
+        <div class="logo">
+          FX
+        </div>
+
+        <div class="brand-text">
+          <h2>FleetX</h2>
+          <span>DIGITAL TWIN</span>
+        </div>
+
+      </div>
+
+
+      <nav class="sidebar-nav">
+
+        <a href="../index.html" class="nav-item">
+          <span>Overview</span>
+        </a>
+
+        <a href="operations.html" class="nav-item">
+          <span>Operations</span>
+        </a>
+
+        <a href="risk.html" class="nav-item">
+          <span>Risk</span>
+        </a>
+
+        <a href="adaptation.html" class="nav-item">
+          <span>Adaptation</span>
+        </a>
+
+        <a href="vehicles.html" class="nav-item">
+          <span>Vehicles</span>
+        </a>
+
+        <a href="alerts.html" class="nav-item active">
+          <span>Alerts</span>
+        </a>
+
+      </nav>
+
+    </aside>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="main-content">
+
+
+      <!-- HEADER -->
+
+      <header class="top-header">
+
+        <div class="page-title">
+
+          <div class="eyebrow">
+            Incident feed
+          </div>
+
+          <h1>
+            Alert center
+          </h1>
+
+        </div>
+
+      </header>
+
+
+      <!-- =========================
+           KPI CARDS
+      ========================== -->
+
+      <section class="kpi-grid">
+
+
+        <!-- OPEN ALERTS -->
+
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Open alerts
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2 id="totalAlerts">
+              --
+            </h2>
+
+            <span class="change warning">
+              LIVE
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- CRITICAL -->
+
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Critical
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2 id="highAlerts">
+              --
+            </h2>
+
+            <span class="change blue">
+              LIVE
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- MEDIUM -->
+
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Medium
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2 id="mediumAlerts">
+              --
+            </h2>
+
+            <span class="change warning">
+              LIVE
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <!-- RESPONSE SLA -->
+
+        <div class="kpi-card">
+
+          <div class="kpi-title">
+            Response SLA
+          </div>
+
+          <div class="kpi-value-row">
+
+            <h2>
+              94%
+            </h2>
+
+            <span class="change positive">
+              +3%
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================
+           DASHBOARD GRID
+      ========================== -->
+
+      <section class="dashboard-grid">
+
+
+        <!-- =========================
+             RECENT ALERTS
+        ========================== -->
+
+        <div class="dashboard-card">
+
+          <div class="card-header">
+
+            <h2>
+              Recent alerts
+            </h2>
+
+            <span
+              class="alert-count"
+              id="alertCount">
+              --
+            </span>
+
+          </div>
+
+
+          <!-- JavaScript will insert alerts here -->
+
+          <div id="recentAlerts">
+
+            <div class="alert-row">
+
+              <div class="alert-icon medium-icon">
+                !
+              </div>
+
+              <div class="alert-info">
+
+                <strong>
+                  Loading alerts...
+                </strong>
+
+                <span>
+                  Connecting to MineGuard API
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- =========================
+             ESCALATION CHAIN
+        ========================== -->
+
+        <div class="dashboard-card">
+
+          <div class="card-header">
+
+            <h2>
+              Escalation chain
+            </h2>
+
+            <span class="status-pill">
+              online
+            </span>
+
+          </div>
+
+
+          <!-- LEVEL 1 -->
+
+          <div class="alert-row">
+
+            <div class="alert-icon high-icon">
+              1
+            </div>
+
+            <div class="alert-info">
+
+              <strong>
+                Shift supervisor
+              </strong>
+
+              <span>
+                North sector
+              </span>
+
+            </div>
+
+            <span class="alert-level high-text">
+              LIVE
+            </span>
+
+          </div>
+
+
+          <!-- LEVEL 2 -->
+
+          <div class="alert-row">
+
+            <div class="alert-icon medium-icon">
+              2
+            </div>
+
+            <div class="alert-info">
+
+              <strong>
+                Safety officer
+              </strong>
+
+              <span>
+                Risk monitoring
+              </span>
+
+            </div>
+
+            <span class="alert-level medium-text">
+              ACK
+            </span>
+
+          </div>
+
+
+          <!-- LEVEL 3 -->
+
+          <div class="alert-row">
+
+            <div class="alert-icon medium-icon">
+              3
+            </div>
+
+            <div class="alert-info">
+
+              <strong>
+                Maintenance team
+              </strong>
+
+              <span>
+                Vehicle task force
+              </span>
+
+            </div>
+
+            <span class="alert-level medium-text">
+              PENDING
+            </span>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <!-- =========================
+       ALERT JAVASCRIPT
+  ========================== -->
+
+  <script src="../js/alerts.js"></script>
+
+</body>
+
+</html>
