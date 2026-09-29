@@ -390,7 +390,7 @@ button {
   background: linear-gradient(135deg, #000000, #000000);
   display: grid;
   place-items: center;
-  color: #032535;
+  color: #f2f4f5;
   font-size: 0.62rem;
   font-weight: 700;
   box-shadow: 0 10px 20px rgba(59, 181, 205, 0.35);
@@ -635,12 +635,12 @@ button {
     background:
         radial-gradient(
             circle at 50% 50%,
-            #304b5a 0%,
-            #1d3442 45%,
-            #102632 100%
+            #dce0e2 0%,
+            #f4f4f5 45%,
+            #e5e9eb 100%
         );
 
-    border: 1px solid rgba(120, 180, 210, 0.18);
+    border: 1px solid rgba(140, 149, 153, 0.18);
 }
 
 
@@ -682,7 +682,7 @@ button {
 
     display: block !important;
 
-    background: rgba(185, 196, 202, 0.20);
+    background: rgba(229, 232, 235, 0.2);
 
     border: 1px solid rgba(220, 230, 235, 0.12);
 
@@ -752,7 +752,7 @@ button {
 
     background: rgba(6, 20, 29, 0.82);
 
-    border: 1px solid rgba(140, 190, 215, 0.16);
+    border: 1px solid #e3e7e729;
 
     border-radius: 7px;
 
@@ -813,28 +813,28 @@ button {
 /* yellow */
 
 .map-card .loading .zone-dot {
-    background: #000000 !important;
+    background: #f8f5f5 !important;
 }
 
 
 /* blue */
 
 .map-card .corridor .zone-dot {
-    background: #000000 !important;
+    background: #fcf6f6 !important;
 }
 
 
 /* red */
 
 .map-card .restricted .zone-dot {
-    background: #000000 !important;
+    background: #eeeaea !important;
 }
 
 
 /* green */
 
 .map-card .dumping .zone-dot {
-    background: #000000!important;
+    background: #eeecec!important;
 }
 
 
@@ -863,7 +863,7 @@ button {
 
     font-weight: 800;
 
-    background: #000000;
+    background: #ebe3e3;
 
     border: 1px solid rgba(255,255,255,0.75);
 
@@ -1742,7 +1742,7 @@ button {
 }
 
 .vehicle-status.operating .status-dot {
-    background: #000000 !important;
+    background: #e9e5e5 !important;
 
     box-shadow: 0 0 7px rgba(79,210,174,0.6) !important;
 }
@@ -1751,7 +1751,7 @@ button {
 /* idle */
 
 .vehicle-status.idle {
-    color: #080807 !important;
+    color: #f1f1ed !important;
 
     background: rgba(245,189,85,0.10) !important;
 }
@@ -1764,13 +1764,13 @@ button {
 /* maintenance */
 
 .vehicle-status.maintenance {
-    color: #6ab8f0 !important;
+    color: #f3f5f7 !important;
 
     background: rgba(106,184,240,0.10) !important;
 }
 
 .vehicle-status.maintenance .status-dot {
-    background: #6ab8f0 !important;
+    background: #f3f5f7 !important;
 }
 
 
@@ -1837,7 +1837,7 @@ button {
 
 
 .vehicle-metric span {
-    color: #829ba9 !important;
+    color: #eff3f5 !important;
 
     font-size: 10px !important;
 
@@ -1881,7 +1881,7 @@ button {
 
 
 .vehicle-health strong {
-    color: #4fd2ae !important;
+    color: #e7eeec !important;
 
     font-size: 10px !important;
 
@@ -2008,4 +2008,97 @@ button {
   height: 100%;
   background: #39412e !important;
   border-radius: 999px;
+}
+/* ================================
+   FLEETX MAIN CONTENT TEXT
+   ================================ */
+
+.main-content {
+    color: #000;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6,
+.main-content p,
+.main-content span,
+.main-content label,
+.main-content div,
+.main-content td,
+.main-content th,
+.main-content li {
+    color: #000;
+}
+
+/* Recharts */
+.main-content .recharts-text {
+    fill: #000 !important;
+}
+
+.main-content .recharts-cartesian-axis-tick-value {
+    fill: #000 !important;
+}
+
+.main-content .recharts-legend-item-text {
+    color: #000 !important;
+}
+.change.warning {
+    background:  rgba(30, 136, 229, 0.12)!important;
+    color: #0b0c0c !important;
+}
+/* ==========================================
+   OPERATIONS PAGE - SHIFT PERFORMANCE MAP
+   ========================================== */
+
+.dashboard-grid .mine-map {
+    background:
+        radial-gradient(
+            ellipse at center,
+            #294B5C 0%,
+            #1D3949 45%,
+            #102B38 100%
+        ) !important;
+
+    border: 1px solid rgba(120, 180, 210, 0.25) !important;
+}
+
+.dashboard-grid .map-grid {
+    background-image:
+        linear-gradient(
+            rgba(150, 200, 225, 0.07) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(150, 200, 225, 0.07) 1px,
+            transparent 1px
+        ) !important;
+}
+
+.dashboard-grid .road {
+    background: rgba(120, 170, 195, 0.30) !important;
+    border-color: rgba(180, 215, 230, 0.18) !important;
+}
+
+.dashboard-grid .map-vehicle {
+    background: #1E88E5 !important;
+    color: #fffafa !important;
+}
+/* Operations map - dark black text */
+.dashboard-grid .map-zone {
+    color: #000000 !important;
+}
+
+.dashboard-grid .map-vehicle {
+    color: #000000 !important;
+}
+.dashboard-grid .map-zone {
+    color: #ebe8e8 !important;
+}
+
+.dashboard-grid .map-zone .zone-dot {
+    background: #000000 !important;
 }
